@@ -26,7 +26,7 @@
 
 
 
-4\*\*. Python Utilities\*\*         – File handling, exception handling, logging
+4\. **Python Utilities**         – File handling, exception handling, logging
 
 5\. **Parallel Programming**     – Multithreading, multiprocessing
 
@@ -282,139 +282,51 @@
 
 
 
-**1. String Methods**
 
-\----------------------------------------------------
 
 
 
-├─ ASCII Functions
 
-│     ├─ ord(c)        : ASCII value                    -> ord('a')        # 97
 
-│     └─ chr(n)        : Character from ASCII           -> chr(97)         # 'a'
 
-│
 
-├─ Extraction
 
-│     ├─ strip()       : Remove spaces (both sides)     -> "  hello  ".strip()   # "hello"
 
-│     ├─ lstrip()     : remove left spaces
 
-│     ├─ rstrip()     : remove right spaces
 
-│     └─ split()       : Split string                   -> "hello world".split()  # \['hello','world']
 
-│
 
-├─ Manipulations
 
-│     ├─ replace()     : Replace substring              -> "hello world".replace("world","Python")
 
-│     ├─ lower()       : Convert to lowercase           -> "HELLO".lower()       # "hello"
 
-│     └─ upper()       : Convert to uppercase           -> "hello".upper()       # "HELLO"
 
-│
 
-├─ String Checks
 
-│     ├─ isalpha()     : Only letters                   -> "abc".isalpha()       # True
 
-│     ├─ isdigit()     : Only digits                    -> "123".isdigit()       # True
 
-│     ├─ isnumeric()   : Numeric (incl unicode)         -> "123".isnumeric()     # True
 
-│     ├─ isalnum()     : Letters + digits               -> "abc123".isalnum()    # True
 
-│     ├─ islower()     : Check lowercase                -> "hello".islower()     # True
 
-│     └─ isupper()     : Check uppercase                -> "HELLO".isupper()     # True
 
-│
 
-└─ Pattern Matching
 
-&#x20;     ├─ startswith()  : Starts with prefix             -> "hello".startswith("he")  # True
 
-&#x20;     └─ endswith()    : Ends with suffix               -> "hello".endswith("lo")    # True
 
 
 
-**2. Numerical Functions**
 
-\----------------------------------------------------
 
 
 
-├─ Absolute \& Rounding
 
-│     ├─ abs(n)         : Absolute value                -> abs(-7)           # 7
 
-│     ├─ round(n,d)     : Round to d decimals           -> round(3.1415,2)   # 3.14
 
-│     ├─ math.ceil(n)   : Round up                      -> math.ceil(5.1)    # 6
 
-│     └─ math.floor(n)  : Round down                    -> math.floor(5.9)   # 5
 
-│
 
-├─ Power \& Logarithmic
 
-│     ├─ math.sqrt(n)   : Square root                   -> math.sqrt(25)     # 5.0
 
-│     ├─ math.pow(n,p)  : Power (float)                 -> math.pow(2,3)     # 8.0
 
-│     ├─ pow(n,p,mod)   : Modular power (IMPORTANT)     -> pow(2,3,5)        # 3
-
-│     ├─ math.exp(n)    : e^n                           -> math.exp(1)
-
-│     ├─ math.log(x)    : Natural log                   -> math.log(10)
-
-│     ├─ math.log2(x)   : Log base 2                    -> math.log2(8)      # 3.0
-
-│     └─ math.log10(x)  : Log base 10                   -> math.log10(100)   # 2.0
-
-│
-
-├─ Aggregate Functions
-
-│     ├─ min(iterable)  : Minimum value                 -> min(\[1,2,3])      # 1
-
-│     ├─ max(iterable)  : Maximum value                 -> max(\[1,2,3])      # 3
-
-│     ├─ len(iterable)  : Count elements                -> len(\[1,2,3])      # 3
-
-│     ├─ sum(iterable)  : Sum                           -> sum(\[1,2,3])      # 6
-
-│     ├─ statistics.mean(data)     : Average             -> mean(\[1,2,3])     # 2
-
-│     ├─ statistics.variance(data) : Variance
-
-│     └─ statistics.stdev(data)    : Standard deviation
-
-│
-
-└─ DSA Important Functions
-
-&#x20;     ├─ divmod(a,b)    : (quotient, remainder)          -> divmod(7,3)       # (2,1)
-
-&#x20;     ├─ math.gcd(a,b)  : Greatest common divisor         -> math.gcd(12,8)    # 4
-
-&#x20;     └─ math.lcm(a,b)  : Least common multiple           -> math.lcm(4,6)     # 12
-
-
-
-
-
-
-
-
-
-
-
-===========================================================================================================================================================
 
 **Data Structures**:  Strings | List | Set | Tuple | Dictionary
 
@@ -822,7 +734,161 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 =====================================================================================================================================================================================
+
+**1. String Methods**
+
+\----------------------------------------------------
+
+
+
+├─ ASCII Functions
+
+│     ├─ ord(c)        : ASCII value                    -> ord('a')        # 97
+
+│     └─ chr(n)        : Character from ASCII           -> chr(97)         # 'a'
+
+│
+
+├─ Extraction
+
+│     ├─ strip()       : Remove spaces (both sides)     -> "  hello  ".strip()   # "hello"
+
+│     ├─ lstrip()     : remove left spaces
+
+│     ├─ rstrip()     : remove right spaces
+
+│     └─ split()       : Split string                   -> "hello world".split()  # \['hello','world']
+
+│
+
+├─ Manipulations
+
+│     ├─ replace()     : Replace substring              -> "hello world".replace("world","Python")
+
+│     ├─ lower()       : Convert to lowercase           -> "HELLO".lower()       # "hello"
+
+│     └─ upper()       : Convert to uppercase           -> "hello".upper()       # "HELLO"
+
+│
+
+├─ String Checks
+
+│     ├─ isalpha()     : Only letters                   -> "abc".isalpha()       # True
+
+│     ├─ isdigit()     : Only digits                    -> "123".isdigit()       # True
+
+│     ├─ isnumeric()   : Numeric (incl unicode)         -> "123".isnumeric()     # True
+
+│     ├─ isalnum()     : Letters + digits               -> "abc123".isalnum()    # True
+
+│     ├─ islower()     : Check lowercase                -> "hello".islower()     # True
+
+│     └─ isupper()     : Check uppercase                -> "HELLO".isupper()     # True
+
+│
+
+└─ Pattern Matching
+
+&#x20;     ├─ startswith()  : Starts with prefix             -> "hello".startswith("he")  # True
+
+&#x20;     └─ endswith()    : Ends with suffix               -> "hello".endswith("lo")    # True
+
+
+
+**2. Numerical Functions**
+
+\----------------------------------------------------
+
+
+
+├─ Absolute \& Rounding
+
+│     ├─ abs(n)         : Absolute value                -> abs(-7)           # 7
+
+│     ├─ round(n,d)     : Round to d decimals           -> round(3.1415,2)   # 3.14
+
+│     ├─ math.ceil(n)   : Round up                      -> math.ceil(5.1)    # 6
+
+│     └─ math.floor(n)  : Round down                    -> math.floor(5.9)   # 5
+
+│
+
+├─ Power \& Logarithmic
+
+│     ├─ math.sqrt(n)   : Square root                   -> math.sqrt(25)     # 5.0
+
+│     ├─ math.pow(n,p)  : Power (float)                 -> math.pow(2,3)     # 8.0
+
+│     ├─ pow(n,p,mod)   : Modular power (IMPORTANT)     -> pow(2,3,5)        # 3
+
+│     ├─ math.exp(n)    : e^n                           -> math.exp(1)
+
+│     ├─ math.log(x)    : Natural log                   -> math.log(10)
+
+│     ├─ math.log2(x)   : Log base 2                    -> math.log2(8)      # 3.0
+
+│     └─ math.log10(x)  : Log base 10                   -> math.log10(100)   # 2.0
+
+│
+
+├─ Aggregate Functions
+
+│     ├─ min(iterable)  : Minimum value                 -> min(\[1,2,3])      # 1
+
+│     ├─ max(iterable)  : Maximum value                 -> max(\[1,2,3])      # 3
+
+│     ├─ len(iterable)  : Count elements                -> len(\[1,2,3])      # 3
+
+│     ├─ sum(iterable)  : Sum                           -> sum(\[1,2,3])      # 6
+
+│     ├─ statistics.mean(data)     : Average             -> mean(\[1,2,3])     # 2
+
+│     ├─ statistics.variance(data) : Variance
+
+│     └─ statistics.stdev(data)    : Standard deviation
+
+│
+
+└─ DSA Important Functions
+
+&#x20;     ├─ divmod(a,b)    : (quotient, remainder)          -> divmod(7,3)       # (2,1)
+
+&#x20;     ├─ math.gcd(a,b)  : Greatest common divisor         -> math.gcd(12,8)    # 4
+
+&#x20;     └─ math.lcm(a,b)  : Least common multiple           -> math.lcm(4,6)     # 12
+
+
+
+===========================================================================================================================================================
 
 **Functions :**
 
@@ -976,11 +1042,11 @@
 
 
 
-&#x09;⮚ On-Demand Value Generation  : Values are generated only when requested instead of creating all values at once.
+&#x09;⮚ Generators produce values **on-demand** instead of storing them in memory.
 
-&#x09;⮚ State Preservation 	      : The generator remembers its previous execution state and continues from where it paused.
+&#x09;⮚ They **remember their state** and continue execution from where they left off.
 
-&#x09;⮚ Memory Efficiency 	      : Since values are generated lazily, generators avoid storing entire datasets in memory, making them suitable for large data processing.
+&#x09;⮚ They are **memory efficient**, especially for large datasets or streams.
 
 
 
@@ -1002,8 +1068,7 @@
 
 
 
-&#x09;⮚ Usage Scenario  : Ideal for replacing yield with return statements
-when dealing with ---> large datasets, file streams, or infinite sequences  to generate values on-demand \& avoid memory overhead.
+&#x09;⮚ Usage Scenario  : Ideal for replacing yield with return statements **{**large datasets, file streams, or infinite sequences**}**
 
 ==================================================================================================================================
 
