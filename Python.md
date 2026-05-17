@@ -12,7 +12,7 @@
 
 
 
-2\. Functional Programming 
+2\. Functional Programming
 
 &#x20;      **Functions**	     – Functions, lambda, generators, decorators
 
@@ -26,7 +26,7 @@
 
 
 
-4**. Python Utilities**         – File handling, exception handling, logging
+4\*\*. Python Utilities\*\*         – File handling, exception handling, logging
 
 5\. **Parallel Programming**     – Multithreading, multiprocessing
 
@@ -282,7 +282,7 @@
 
 
 
-**1. String Functions**
+**1. String Methods**
 
 \----------------------------------------------------
 
@@ -296,17 +296,25 @@
 
 │
 
-├─ Manipulations
+├─ Extraction
 
 │     ├─ strip()       : Remove spaces (both sides)     -> "  hello  ".strip()   # "hello"
+
+│     ├─ lstrip()     : remove left spaces
+
+│     ├─ rstrip()     : remove right spaces
+
+│     └─ split()       : Split string                   -> "hello world".split()  # \['hello','world']
+
+│
+
+├─ Manipulations
 
 │     ├─ replace()     : Replace substring              -> "hello world".replace("world","Python")
 
 │     ├─ lower()       : Convert to lowercase           -> "HELLO".lower()       # "hello"
 
-│     ├─ upper()       : Convert to uppercase           -> "hello".upper()       # "HELLO"
-
-│     └─ split()       : Split string                   -> "hello world".split()  # \['hello','world']
+│     └─ upper()       : Convert to uppercase           -> "hello".upper()       # "HELLO"
 
 │
 
@@ -498,13 +506,13 @@
 
 &#x09;	**Indices:**
 
-&#x09;		list\[start:stop:step]        → Slicing (stop is exclusive)
+&#x09;		list\[start:stop:step]        → Slicing (stop is exclusive): Default: start = 0, stop=end of sequence, step=1
 
-&#x20;   			list\[0:n] / list\[-n:-1]      → Positive / Negative indexing
+&#x20;       		list\[0:n:1]                  → Traverse left → right: +ve indexing
 
-&#x20;  		        list\[start:]                 → From start index to end
+&#x09;	        list\[-1:-n:-1]               → Traverse right → left: -ve indexing
 
-&#x20;   			list\[::-1]                   → Reverse list
+
 
 &#x09;	**Looping:**
 
@@ -530,6 +538,66 @@
 
 ===========================================================================================================================================================
 
+**String:""**
+
+&#x09;**Initialization** 		    : str="" Empty String / str="Hello World !!"
+
+&#x09;=================================================================================================
+
+&#x09;**Insert**		❌ Not possible (Strings are immutable)
+
+&#x09;**Delete**		❌ Not possible (Cannot delete characters directly)
+
+&#x09;**Update**		❌ Not possible (Cannot modify existing characters)
+
+&#x09;	        ✔ Workaround: Convert to list → modify → join back
+
+&#x09;=================================================================================================
+
+&#x09;**Sorting**		🔸sorted(string)   : Returns new sorted list of characters;
+
+&#x09;				     "separator".join(list)  						# Joins elements of list into a single string using 'separator'
+
+
+
+&#x09;**Reverse**		🔸string\[::-1]     : Returns reversed string (copy)
+
+&#x09;=================================================================================================
+
+&#x09;**Accessing**
+
+&#x09;	**Indices:**
+
+&#x09;		string\[start:stop:step]        → Slicing (stop is exclusive)				Default: start = 0, stop = end, step = 1
+
+&#x09;		string\[0:n:1]                  → Traverse left → right (+ve indexing)
+
+&#x09;		string\[-1:-n:-1]               → Traverse right → left (-ve indexing)
+
+&#x09;	**Looping:**
+
+&#x09;		🔸for item in string:              → Iterate characters (value)
+
+&#x09;		🔸for i in range(len(string)):     → Iterate using index
+
+&#x09;		🔸for i, val in enumerate(string): → Iterate index + value
+
+&#x09;	**List comprehension (on string):**
+
+&#x09;		newlist = \[expression for item in string if condition]
+
+&#x09;		Example: \[ch for ch in string if ch != ' ']
+
+
+
+&#x09;**Search**
+
+&#x09;		🔸in operator                   					     → Check existence
+
+&#x09;		🔸\[i for i, ch in enumerate(string) if ch == 'a']                           → Get all index positions of 'a'
+
+===========================================================================================================================================================
+
 **SET: {}**
 
 
@@ -542,7 +610,7 @@
 
 &#x09;	s.add(x)		: Add element x to the set
 
-&#x09;	s.update(iterable): Add multiple elements from iterable
+&#x09;	s.update(iterable)      : Add multiple elements from iterable
 
 
 
@@ -602,39 +670,47 @@
 
 **Tuple:**
 
-&#x09;**Initialization 		    :** t = ()
+&#x09;**Initialization 		    :** t = (1,2,3,4)
 
 &#x09;=================================================================================================
 
-&#x09;**Insert, Delete, Update	    :** NA (Immutable)
+&#x09;**Insert, Delete, Update	    :** NA 
+
+&#x09;			      **Insert** : Tuples are immutable, so new elements cannot be added after creation.
+
+&#x20;   				      **Delete** : Individual elements cannot be removed because tuple size cannot change.
+
+&#x20;   				      **Update** : Existing values cannot be modified once the tuple is created.
 
 &#x09;=================================================================================================
 
-&#x09;**Sorting**
+&#x09;**Sorting**	🔸sorted(lst)      : Returns new sorted list ; sort method wont work since tuples are immutable \& inplace not possible
 
-&#x09;	🔸l.sort(reverse=False)      : NA(Immutable, so no in place sorting)
-
-&#x20; 		🔸sorted(lst)                : Returns new sorted list
-
-&#x09;**Reverse**
-
-&#x09;	🔸l.reverse()                : NA(Immutable, so no in place reverse)
-
-&#x20; 		🔸l\[::-1]                    : Returns reversed copy
+&#x09;**Reverse**	🔸l\[::-1]          : Returns reversed copy; ; reverse method wont work since tuples are immutable \& inplace not possible
 
 &#x09;=================================================================================================
 
 &#x09;**Accessing**
 
-&#x09;	**Indices:**
+&#x09;	
 
-&#x09;		list\[start:stop:step]        → Slicing (stop is exclusive)
+&#x09;	**Indexing:**
 
-&#x20;   			list\[0:n] / list\[-n:-1]      → Positive / Negative indexing
+&#x09;		tup\[index]		    → Access random element based on index		
 
-&#x20;  		        list\[start:]                 → From start index to end
+&#x09;		a, b, c, d, e = tup         → Unpacking
 
-&#x20;   			list\[::-1]                   → Reverse list
+&#x09;	
+
+&#x09;	**Slicing:**
+
+&#x09;		tup\[start:stop:step]        → Slicing (stop is exclusive): Default: start = 0, stop=end of sequence, step=1
+
+&#x20;       		tup\[0:n:1]                  → Traverse left → right: +ve indexing
+
+&#x09;	        tup\[-1:-n:-1]               → Traverse right → left: -ve indexing
+
+
 
 &#x09;	**Looping:**
 
@@ -650,7 +726,7 @@
 
 &#x09;		  in operator                    → Check existence
 
-&#x20; 			  \[x for x in lst if x==2]       → Get all index's of 2
+&#x20; 			  \[x for x in tup if x==2]       → Get all index's of 2
 
 &#x09;=================================================================================================
 
