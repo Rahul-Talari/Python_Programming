@@ -1,0 +1,4 @@
+I am writing to the file.
+I am appending to the file.
+Matillion Data Productivity Cloud and Maia combine a cloud-native data integration platform with agentic data engineering to accelerate every stage of the data lifecycle.
+Maia functions as a team of always-on virtual data engineers, automating the design, build, optimization, and monitoring of pipelines. By embedding AI agents directly into workflows, Maia enables teams to scale instantly, move faster, and deliver consistent, high-quality data for AI, analytics, and operational systems.

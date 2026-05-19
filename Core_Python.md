@@ -20,7 +20,7 @@
 
 3\. Object-Oriented Programming
 
-&#x20;      **OOPS**                  – Classes, objects, inheritance, polymorphism, encapsulation, abstraction
+&#x20;      **OOPS**                  – Access Modifiers, Classes, objects, inheritance, polymorphism, encapsulation, abstraction
 
 &#x20;      **Modules \& Packages**    – Imports, code organization, reusability
 
@@ -586,7 +586,7 @@
 
 &#x09;=================================================================================================
 
-&#x09;**Insert, Delete, Update	    :** NA 
+&#x09;**Insert, Delete, Update	    :** NA
 
 &#x09;			      **Insert** : Tuples are immutable, so new elements cannot be added after creation.
 
@@ -604,15 +604,15 @@
 
 &#x09;**Accessing**
 
-&#x09;	
+&#x09;
 
 &#x09;	**Indexing:**
 
-&#x09;		tup\[index]		    → Access random element based on index		
+&#x09;		tup\[index]		    → Access random element based on index
 
 &#x09;		a, b, c, d, e = tup         → Unpacking
 
-&#x09;	
+&#x09;
 
 &#x09;	**Slicing:**
 
@@ -1068,7 +1068,7 @@
 
 
 
-&#x09;⮚ Usage Scenario  : Ideal for replacing yield with return statements **{**large datasets, file streams, or infinite sequences**}**
+&#x09;⮚ Usage Scenario  : Ideal for replacing yield with return statements **{large datasets, file streams, or infinite sequences}**
 
 ==================================================================================================================================
 

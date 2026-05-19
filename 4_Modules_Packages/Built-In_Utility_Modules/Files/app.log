@@ -1,0 +1,6 @@
+2026-05-18 22:40:40 | INFO | Program started
+2026-05-18 22:40:40 | DEBUG | This is a debug message
+2026-05-18 22:40:40 | INFO | This is an info message
+2026-05-18 22:40:40 | WARNING | This is a warning message
+2026-05-18 22:40:40 | ERROR | This is an error message
+2026-05-18 22:40:40 | CRITICAL | This is a critical message
