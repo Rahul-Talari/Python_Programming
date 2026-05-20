@@ -2,33 +2,17 @@
 
 ==================================================
 
-1\. Procedural Programming
-
-&#x20;      **Basics**                – Data types, variables, I/O, operators
-
-&#x20;      **Control Flow**          – Conditionals, loops, break, continue, pass
-
-&#x20;      **Data Structures**       – Strings, lists, tuples, sets, dictionaries
+1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators),
+			         **Control Flow** (if-else, loops, break, continue, pass)
+				 **Data Structures** (strings, lists, tuples, sets, dicts)
 
 
 
-2\. Functional Programming
+2\. **Function**al Programming      – Functions, lambda, generators, decorators
 
-&#x20;      **Functions**	     – Functions, lambda, generators, decorators
+3\. **Object-Oriented** Programming – OOPs (classes, objects, access modifiers, inheritance, polymorphism, encapsulation, abstraction), exception handling, Multithreading/processing
 
-
-
-3\. Object-Oriented Programming
-
-&#x20;      **OOPS**                  – Access Modifiers, Classes, objects, inheritance, polymorphism, encapsulation, abstraction
-
-&#x20;      **Modules \& Packages**    – Imports, code organization, reusability
-
-
-
-4\. **Python Utilities**         – File handling, exception handling, logging
-
-5\. **Parallel Programming**     – Multithreading, multiprocessing
+4\. **Modules \& Packages**          – Built-in modules (random, os, shutil, json, datetime), file handling, logging
 
 
 

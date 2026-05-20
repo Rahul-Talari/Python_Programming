@@ -1,254 +1,44 @@
 **Core Python**
 
-==================================================
+==========================================================================================================================
 
-1\. Procedural Programming
+1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators),
+**Control Flow** (if-else, loops, break, continue, pass)
+**Data Structures** (strings, lists, tuples, sets, dicts)
 
-&#x20;      **Basics**                – Data types, variables, I/O, operators
 
-&#x20;      **Control Flow**          – Conditionals, loops, break, continue, pass
 
-&#x20;      **Data Structures**       – Strings, lists, tuples, sets, dictionaries
+2\. **Function**al Programming      – Functions, lambda, generators, decorators
 
+3\. **Object-Oriented** Programming – OOPs (classes, objects, access modifiers, inheritance, polymorphism, encapsulation, abstraction), exception handling, Multithreading/processing
 
+4\. **Modules \& Packages**          – Built-in modules (random, os, shutil, json, datetime), file handling, logging
 
-2\. Functional Programming
 
-&#x20;      **Functions**	     – Functions, lambda, generators, decorators
 
+**🧠 Python OOPS**
 
 
-3\. Object-Oriented Programming
 
-&#x20;      **OOPS**                  – Access Modifiers, Classes, objects, inheritance, polymorphism, encapsulation, abstraction
+&#x09;- 🧱 Classes \& Objects, Constructors (`\\\_\\\_init\\\_\\\_`), `self`
 
-&#x20;      **Modules \& Packages**    – Imports, code organization, reusability
+&#x09;- 🔒 Encapsulation, Access Modifiers (public, protected, private)
 
+&#x09;- 🎭 Abstraction (ABC module, abstract methods)
 
+&#x09;- 🔁 Inheritance (single, multiple, multilevel, hierarchical)
 
-4\. **Python Utilities**         – File handling, exception handling, logging
+&#x09;- 🔄 Polymorphism (method overriding, concept of overloading)
 
-5\. **Parallel Programming**     – Multithreading, multiprocessing
+&#x09;- ⚙️ Class methods, Static methods
 
 
 
-
-
-**========================================================================================================================================================================================**
-
-**Exceptions :** Exceptions are events that occur during execution, disrupting the normal flow of a program.
-
-
-
-
-
-&#x09;     Types of Exceptions:
-
-&#x09;	1. Built-in Exceptions (ex: SyntaxError, ValueError, TypeError)
-
-&#x09;	2. User-defined Exceptions (custom classes)
-
-
-
-Handling Exceptions:
-
-&#x09;1. Try: Enclose code that may raise an exception.
-
-&#x09;2. Except: Handle the exception (specific or general).
-
-&#x09;3. Else: Execute if no exception occurs.
-
-&#x09;4. Finally: Execute regardless of exception.
-
-
-
-**Basic Syntax:**
-
-try:
-
-&#x20;   # code that may raise exception
-
-except ExceptionType:
-
-&#x20;   # handle exception
-
-except Exception as e:
-
-&#x20;      print(e)
-
-else:
-
-&#x20;   # code if no exception
-
-finally:
-
-&#x20;   # code always executed
-
-
-
-**Ex:**
-
-try:
-
-&#x20;   # code block where exception can occur
-
-&#x20;   a = int(input("Enter the number 1: "))
-
-&#x20;   b = int(input("Enter the number 2: "))
-
-&#x20;   c = a / b
-
-
-
-except NameError:
-
-&#x20;   print("The user has not defined the variable.")
-
-&#x20;
-
-except ZeroDivisionError:
-
-&#x20;   print("Please provide a number greater than 0.")
-
-
-
-except TypeError:
-
-&#x20;   print("Try to make the datatype similar.")
-
-&#x20;
-
-except Exception as ex:
-
-&#x20;   print("An error occurred:", ex)
-
-&#x20;
-
-else:
-
-&#x20;   # Executes if no exception occurs
-
-&#x20;   print("Result:", c)
-
-
-
-finally:
-
-&#x20;   # Always executes
-
-&#x20;   print("The execution is done.")
-
-
-
-Raising Exceptions:
-
-
-
-1\. Raise a built-in exception: raise ValueError("Invalid input")
-
-2\. Raise a custom exception: raise MyCustomError("Something went wrong")
-
-
-
-
-
-Custom Exceptions:
-
-
-
-Create a class inheriting from Exception:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Python OOPS
-
-&#x20;  - Classes \& Objects, self, Constructors (\_\_init\_\_)
-
-&#x20;  - Access Modifiers (public, protected, private), Encapsulation
-
-&#x20;  - Inheritance (single, multiple, multilevel, hierarchical), Method Overriding
-
-&#x20;  - Polymorphism (method overloading concept, overriding)
-
-&#x20;  - Abstraction (ABC module, abstract methods)
-
-&#x20;  - Static methods, Class methods
-
-
-
-Modules \& Packages
-
-&#x20;  - Modules, Built-in modules (math, random, os, sys, datetime)
-
-&#x20;  - Packages
-
-&#x20;  - Code reusability, pip \& external libraries
-
-
-
-
-
-**========================================================================================================================================================================================**
+========================================================================================================================================================================================
 
 **📦 Module vs Package (Python Imports)**
 
-**========================================================================================================================================================================================**
+========================================================================================================================================================================================
 
 
 
@@ -308,5 +98,107 @@ Modules \& Packages
 
 &#x09;    print(add(2, 3))                          	  # calls add function → returns 5
 
+========================================================================================================================================================================================
 
+**Exceptions :** Exceptions are runtime events that disrupt the normal flow of a program.
+
+
+
+&#x09;     **Types of Exceptions:**
+
+&#x09;	1. Built-in Exceptions 	    : SyntaxError, ValueError, TypeError
+
+&#x09;	2. User-defined Exceptions  : raise built-in/custom exceptions
+
+
+
+&#x09;     **Exception Handling Flow:**
+
+&#x09;	try     -> code that may raise exception
+
+&#x09;	except  -> handles the exception
+
+&#x09;	else    -> runs if no exception occurs
+
+&#x09;	finally -> always runs (whether error occurs or not)
+
+
+
+**Basic Syntax:**
+
+======================
+
+try:
+
+&#x20;   # risky code
+
+&#x20;   a = int(input("Enter number 1: "))
+
+&#x20;   b = int(input("Enter number 2: "))
+
+&#x20;   c = a / b
+
+
+
+except ZeroDivisionError:
+
+&#x20;   print("Denominator cannot be zero")
+
+
+
+except Exception as e:
+
+&#x20;   print("Unexpected error:", e)
+
+
+
+else:
+
+&#x20;   print("Result:", c)
+
+
+
+finally:
+
+&#x20;   print("Execution completed")
+
+
+
+**Raise Built-in Exception**
+
+========================
+
+&#x09;raise ValueError("Age cannot be negative")            → Immediately raises an error and stops execution
+
+&#x09;raise ZeroDivisionError("Denominator cannot be zero") → Immediately raises an error and stops execution
+
+
+
+&#x09;If you want the program to continue execution after an error, wrap the risky code inside try-except block.
+
+
+
+**Raise Custom exception**
+
+========================
+
+class MyError(Exception):
+
+&#x20;   pass
+
+
+
+x = -10
+
+try:
+
+&#x20;   if x < 0:
+
+&#x20;       **raise** MyError("Negative number not allowed")
+
+except MyError as e:
+
+&#x20;   print("Error caught:", e)
+
+===============================================================================================================================================================
 
