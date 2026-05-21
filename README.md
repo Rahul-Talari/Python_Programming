@@ -1,14 +1,15 @@
 # Python Programming Learning Repository
 
+A comprehensive collection of Jupyter notebooks covering Python fundamentals to advanced concepts, organized by programming paradigms and practical applications.
+
 ## Directory Structure
 
 ```
 Python_Programming/
 │
 ├── 1_Procedural_Programming/
-│   │
 │   ├── 1.1_Basics/
-│   │   ├── Datatype_Variable_Ip-Op.ipynb
+│   │   ├── Variable_Datatype_Ip-Op.ipynb
 │   │   └── operators.ipynb
 │   │
 │   ├── 1.2_Control_Flow/
@@ -24,61 +25,77 @@ Python_Programming/
 │
 ├── 2_Functional_Programming/
 │   ├── 2.1_functions.ipynb
-│   └── 2.2_lambda_generator_decorator.ipynb
+│   ├── 2.2_lambda_generator_decorator.ipynb
+│   └── 2.3_Numerical Functions.ipynb
 │
 ├── 3_Object_Oriented_Programming/
-│   ├── 3.0_classes_objects.ipynb
+│   ├── 3.0_Class_Obj_Constructor_AccessModifier.ipynb
 │   ├── 3.1_Encapsulation.ipynb
 │   ├── 3.2_Abstraction.ipynb
 │   ├── 3.3_Inheritance.ipynb
 │   ├── 3.4_Polymorphism.ipynb
-│   ├── 3.5_Modules_Packages.ipynb
-│   └── 3.6_Exceptional_handling.ipynb
+│   └── 3.5_Exceptional_handling.ipynb
 │
-├── 4_Parallel_Programming/
-│   ├── 4.1_Multithreading.ipynb
-│   └── 4.2_Multiprocessing.ipynb
+├── 4_Modules_Packages/
+│   ├── Modules_Packages.ipynb
+│   ├── Built-In_Utility_Modules/
+│   │   ├── 1_random_os_datetime.ipynb
+│   │   ├── 2_FileHandling.ipynb
+│   │   ├── 3_logging.ipynb
+│   │   └── Files/
+│   │       └── file_handling.txt
+│   │
+│   └── mypackage/
+│       ├── __init__.py
+│       ├── math_utils.py
+│       └── advanced/
+│           ├── __init__.py
+│           └── advanced_math.py
 │
-└── 5_Python_Utilities/
-    ├── 5.1_FileHandling.ipynb
-    └── 5.2_logging.ipynb
+└── Documentation/
+    ├── Core_Python.md
+    └── Advanced_Python.md
 ```
 
 ## Course Organization
 
 ### 1. Procedural Programming
 Foundation of Python programming with basic concepts and control structures.
-- **1.1 Basics**: Data types, variables, and input/output operations
-- **1.2 Control Flow**: Conditional and iterative statements
+- **1.1 Basics**: Variables, data types, and operators
+- **1.2 Control Flow**: Conditional and iterative statements (if/else, loops)
 - **1.3 Data Structures**: Lists, Strings, Sets, Tuples, and Dictionaries
 
 ### 2. Functional Programming
-Functional paradigm in Python with first-class functions.
-- **2.1 Functions**: Function definitions, parameters, and return values
-- **2.2 Lambda, Generators & Decorators**: Advanced functional concepts
+Functional paradigm in Python with first-class functions and advanced concepts.
+- **2.1 Functions**: Function definitions, parameters, return values, and scope
+- **2.2 Lambda, Generators & Decorators**: Anonymous functions, generators, and function decorators
+- **2.3 Numerical Functions**: Mathematical operations and numerical computations
 
 ### 3. Object-Oriented Programming
-Object-oriented design principles and implementation.
-- **3.0 Classes & Objects**: Core OOP concepts
-- **3.1 Encapsulation**: Data hiding and access control
-- **3.2 Abstraction**: Abstract classes and interfaces
+Object-oriented design principles and implementation in Python.
+- **3.0 Classes, Objects, Constructor & Access Modifiers**: Core OOP concepts
+- **3.1 Encapsulation**: Data hiding and access control mechanisms
+- **3.2 Abstraction**: Abstract classes and abstract methods
 - **3.3 Inheritance**: Class hierarchies and inheritance mechanisms
-- **3.4 Polymorphism**: Method overriding and duck typing
-- **3.5 Modules & Packages**: Code organization and reusability
-- **3.6 Exception Handling**: Error handling and custom exceptions
+- **3.4 Polymorphism**: Method overriding and polymorphic behavior
+- **3.5 Exception Handling**: Error handling, try/catch blocks, and custom exceptions
 
-### 4. Parallel Programming
-Concurrent and parallel execution in Python.
-- **4.1 Multithreading**: Thread-based concurrency
-- **4.2 Multiprocessing**: Process-based parallelism
+### 4. Modules & Packages
+Code organization, reusability, and practical Python utilities.
+- **Modules_Packages.ipynb**: Module creation and package structure
+- **Built-In Utility Modules**:
+  - **1_random_os_datetime.ipynb**: Random generation, OS operations, and datetime handling
+  - **2_FileHandling.ipynb**: File I/O operations and text processing
+  - **3_logging.ipynb**: Application logging and debugging techniques
+- **mypackage/**: Custom package with mathematical utilities and advanced modules
 
-### 5. Python Utilities
-Practical Python tools and utilities.
-- **5.1 File Handling**: File operations and I/O
-- **5.2 Logging**: Application logging and debugging
+### 5. Documentation
+Supporting documentation and advanced learning materials.
+- **Core_Python.md**: Comprehensive guide to core Python concepts
+- **Advanced_Python.md**: Advanced topics and best practices
 
 ## Summary
-- **Total Modules**: 5 main categories
-- **Total Sub-modules**: 17 organized sections
-- **Total Notebooks**: 27 Jupyter notebooks
-- **Format**: All content is in Jupyter Notebook (.ipynb) format
+- **Total Modules**: 4 main categories
+- **Total Notebooks**: 14 Jupyter notebooks
+- **Python Modules**: 1 custom package (mypackage) with 2 submodules
+- **Format**: Jupyter Notebooks (.ipynb) and Markdown documentation (.md)
