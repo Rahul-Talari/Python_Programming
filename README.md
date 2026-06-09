@@ -34,7 +34,8 @@ Python_Programming/
 │   ├── 3.2_Abstraction.ipynb
 │   ├── 3.3_Inheritance.ipynb
 │   ├── 3.4_Polymorphism.ipynb
-│   └── 3.5_Exceptional_handling.ipynb
+│   ├── 3.5_Exceptional_handling.ipynb
+│   └── 3.6_Multithreading.ipynb
 │
 ├── 4_Modules_Packages/
 │   ├── Modules_Packages.ipynb
@@ -79,6 +80,7 @@ Object-oriented design principles and implementation in Python.
 - **3.3 Inheritance**: Class hierarchies and inheritance mechanisms
 - **3.4 Polymorphism**: Method overriding and polymorphic behavior
 - **3.5 Exception Handling**: Error handling, try/catch blocks, and custom exceptions
+- **3.6 Multithreading**: Threading, multiprocessing, and concurrent execution for I/O-bound and CPU-bound tasks
 
 ### 4. Modules & Packages
 Code organization, reusability, and practical Python utilities.
@@ -96,6 +98,6 @@ Supporting documentation and advanced learning materials.
 
 ## Summary
 - **Total Modules**: 4 main categories
-- **Total Notebooks**: 14 Jupyter notebooks
+- **Total Notebooks**: 15 Jupyter notebooks
 - **Python Modules**: 1 custom package (mypackage) with 2 submodules
 - **Format**: Jupyter Notebooks (.ipynb) and Markdown documentation (.md)
