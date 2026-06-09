@@ -9,11 +9,9 @@
 
 ### Key Execution Models
 
-#### Compiler
-Source Code → Compiler → [Compilation Errors? Stop : No Errors? Continue] → Native Machine Code (Executable File) → OS Loads → CPU Executes
+**Compiler:** Source Code → Compiler → [Compilation Errors? Stop : No Errors? Continue] → Native Machine Code (Executable File) → OS Loads → CPU Executes
 
-#### Interpreter
-Source Code → Interpreter → Translate & Execute Step by Step → [Error Encountered? Stop & Report Error]
+**Interpreter:** Source Code → Interpreter → Translate & Execute Step by Step → [Error Encountered? Stop & Report Error]
 
 
 
