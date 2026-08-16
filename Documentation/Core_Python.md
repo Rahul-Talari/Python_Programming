@@ -1,9 +1,7 @@
-**Core Python**
-
-==================================================
+==========================================================================================================================
 
 1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators),
-			         **Control Flow** (if-else, loops, break, continue, pass)
+				 **Control Flow** (if-else, loops, break, continue, pass)
 				 **Data Structures** (strings, lists, tuples, sets, dicts)
 
 
@@ -15,6 +13,20 @@
 4\. **Modules \& Packages**          – Built-in modules (random, os, shutil, json, datetime), file handling, logging
 
 
+
+**🧠 Python OOPS**
+
+
+
+&#x09;- 🧱 Classes, Objects, attributes(class/Instance), methods(class/Instance), constructors,self
+
+&#x09;- 🔁 Inheritance (single, multiple, multilevel, hierarchical)
+
+&#x09;- 🔄 Polymorphism (method overriding, concept of overloading)
+
+&#x09;- 🔒 Encapsulation, Access Modifiers (public, \_protected, \_\_private)
+
+&#x09;- 🎭 Abstraction (ABC module, abstract methods)
 
 
 
