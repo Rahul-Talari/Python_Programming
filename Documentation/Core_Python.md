@@ -1,12 +1,10 @@
 ==========================================================================================================================
 
-1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators),
-				 **Control Flow** (if-else, loops, break, continue, pass)
-				 **Data Structures** (strings, lists, tuples, sets, dicts)
+1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators)
+			         **Control Flow** (if-else, loops, break, continue, pass)
+				 
 
-
-
-2\. **Function**al Programming      – Functions, lambda, generators, decorators
+2\. **Function**al Programming      – Functions, lambda, decorators, generators
 
 3\. **Object-Oriented** Programming – OOPs (classes, objects, access modifiers, inheritance, polymorphism, encapsulation, abstraction), exception handling, Multithreading/processing
 
@@ -46,7 +44,7 @@
 
 **Variables:**
 
-&#x20;   - Name used to store data that can change during program execution
+&#x20;   - Name of a temporary storage location used to hold data during program execution.
 
 &#x20;   - No datatype declaration required, can hold any data type
 
@@ -98,7 +96,7 @@
 
 &#x20;       ⮚ Multiple Values to Multiple variables : a, b, c = 1, "hero", "Ram charan"
 
-&#x20;       ⮚ Single value to Multiple variables    : a = b = c = 1
+&#x20;       ⮚ Single value to Multiple variables    : a = b = c = 1	
 
 
 
