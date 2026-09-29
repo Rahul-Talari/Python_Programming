@@ -20,7 +20,7 @@
 
 
 
-&#x09;- 🧱 Classes, Objects, attributes(class/Instance), methods(class/Instance), constructors,self
+&#x09;- 🧱 Class, attributes(class/static, dynamic/Instance), methods(class/static, dynamic/Instance), self; Objects, constructors
 
 &#x09;- 🔁 Inheritance (single, multiple, multilevel, hierarchical)
 
@@ -32,6 +32,312 @@
 
 
 
+======================================================================================================================================================================================
+
+**Class**        : A blueprint/template for creating objects. Defines attributes (data) and methods (behavior).
+
+
+
+**Attributes**   : Variables defined inside a class that stores data/properties of an object.
+
+&#x20;              ├─ Class Attributes    : shared by all objects; **accessed using ClassName.attribute**
+
+&#x20;              └─ Instance Attributes : Object-specific; defined using self.
+
+
+
+**Methods**      : Functions defined inside a class that define behavior of objects.
+
+&#x20;              ├─ Class Methods       : Work with class data; using cls and @classmethod.
+
+&#x20;              └─ Instance Methods    : Work with object data; using self.
+
+
+
+**Object**       : An instance of a class (real world entity created using a class).
+
+**Constructor**  : A special method (\_\_init\_\_) automatically called when an object is created; used to initialize instance variables.
+
+
+
+\# =========================================================================
+
+\# CLASS ATTRIBUTE + CLASS METHOD
+
+\# =========================================================================
+
+&#x09;class Employee:			
+
+
+
+&#x09;    company = "TCS"              # **Class Attribute**
+
+&#x09;
+
+&#x09;    @classmethod
+
+&#x09;    def get\_company(cls):        # **Class Method**
+
+&#x09;        return cls.company
+
+
+
+&#x09;print(Employee.company)		 # Access class attribute
+
+&#x09;print(Employee.get\_company())	 # Access class method 
+
+
+
+\# =========================================================================
+
+\# INSTANCE ATTRIBUTE + INSTANCE METHOD
+
+\# =========================================================================
+
+&#x09;class Employee:
+
+
+
+&#x09;    def \_\_init\_\_(self, name):    # **Default constructor**
+
+&#x09;        self.name = name         # **Instance Attribute**
+
+
+
+&#x09;    def get\_name(self):          # **Instance Method**
+
+&#x09;        return self.name
+
+
+
+&#x09;obj = Employee("Rahul")		 # Creating object
+
+
+
+&#x09;print(obj.name)			 # Access Instance attribute
+
+&#x09;print(obj.get\_name())		 # Access Instance method
+
+
+
+\# =================================================================================================================
+
+**Inheritance:** Concept in OOP that allows a class to inherit the attributes, methods from another class.
+
+\# =================================================================================================================
+
+
+
+&#x09;     **Supported**:      Single Inheritance       Multi-Level Inheritance                    Hierarchical Inheritance
+
+&#x09;	      	    ---------------------     --------------------------                ---------------------------
+
+&#x09;   		     Parent ───▶ Child       Grand\_Parent ───▶ Parent ───▶ Child      Parent ───▶ Child1
+
+&#x20;                            		                                                                └──▶ Child2
+
+
+
+&#x09;     **Not Supported**: Multiple Inheritance     Hybrid Inheritance
+
+&#x09;       		    ---------------------    ------------------
+
+&#x09;		    Parent1 ──┐
+
+&#x09;   		               ├──▶ Child     Grand\_Parent
+
+&#x09;   		    Parent2 ──┘                    │
+
+&#x20;         		    		                    ▼
+
+&#x20;                         				  Parent
+
+&#x20;                            		    		 /      \\
+
+&#x20;                           		  	        ▼       ▼
+
+&#x20;                         		 	     Child1    Child2
+
+
+
+&#x09;     **Concepts in Inheritance:**
+
+&#x09;	✔ Inheritance: Parent Class, Child Class
+
+&#x09;	✔ Constructor Inheritance (via super())
+
+&#x09;	✔ Method Inheritance
+
+
+
+
+
+&#x09;class Employee:						**# Parent Class**
+
+
+
+&#x09;    def \_\_init\_\_(self, name):				# Parent Constructor
+
+&#x09;        self.name = name
+
+&#x09;        print("Employee Constructor Called")
+
+
+
+&#x09;    def employee\_details(self):				# Parent Method
+
+&#x09;        print(f"{self.name} works in the company")
+
+
+
+
+
+&#x09;class Developer(Employee):				**# Child Class inheriting Parent Class**
+
+&#x09;
+
+&#x09;    def \_\_init\_\_(self, name, skill):			# Child Constructor
+
+&#x09;         super().\_\_init\_\_(name)				**# Calling Parent Constructor using super()**
+
+&#x09;        self.skill = skill
+
+&#x09;        print("Developer Constructor Called")
+
+
+
+&#x09;    def coding(self):					**# Child Method**
+
+&#x09;        print(f"{self.name} writes {self.skill} code")
+
+
+
+
+
+&#x09;dev = Developer("Rahul", "Python")			# Creating Child Object
+
+&#x09;dev.employee\_details()					# Accessing Parent Method
+
+&#x09;dev.coding()						# Accessing Child Method
+
+
+
+\# ========================================================================================================================================================================
+
+**Polymorphism:**	Polymorphism means "many forms". It allows the same method/operator/function name to perform different behaviors depending on the object or data type.
+
+\# ========================================================================================================================================================================
+
+
+
+&#x09;**Method overloading:**
+
+&#x09;	**-** Using the same method name for different number/types of inputs.
+
+&#x09;	**-** Python does not support true method overloading; use default arguments or \*args.
+
+
+
+&#x09;    EX:
+
+&#x09;    def add(\*args):
+
+&#x09;        return sum(args)
+
+
+
+
+
+&#x09;    print(add(1, 2))
+
+&#x20;   	    print(add(1, 2, 3))
+
+
+
+&#x09;**Method overriding (Run-time Polymorphism)**:
+
+&#x09;	- It occurs when Child class provides its own implementation of a method already defined in the parent class.
+
+
+
+&#x09;class Animal:
+
+&#x20;   		def sound(self): print("Animal sound")
+
+
+
+&#x09;class Dog(Animal):
+
+&#x20;   		def sound(self): print("Dog barks")   # Method Overriding
+
+
+
+&#x09;Dog().sound()
+
+
+
+\# ========================================================================================================================================================================
+
+**Abstraction** : 
+
+\# ========================================================================================================================================================================
+
+&#x09;- Hiding implementation details and showing only essential functionality. It can contain attributes, abstract methods, and concrete methods.
+
+&#x20;       - In Python, an abstract class is created by extending the ABC base class and using @abstractmethod for functions.
+
+
+
+&#x09;Example:
+
+
+
+&#x09;from abc import ABC, abstractmethod
+
+
+
+&#x09;class Employee(ABC):              # Abstract class
+
+
+
+&#x09;    company = "TCS"               # Attribute
+
+&#x09;    @abstractmethod
+
+&#x09;    def work(self):               # Abstract Method
+
+&#x09;        pass
+
+
+
+
+
+&#x09;class Developer(Employee):
+
+
+
+&#x09;    def work(self):               # Implementation
+
+&#x20;       	print("Writing code")
+
+&#x09;
+
+
+
+&#x09;obj = Developer()
+
+&#x09;obj.work()
+
+======================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
 ========================================================================================================================================================================================
 
 **📦 Module vs Package (Python Imports)**
@@ -40,7 +346,7 @@
 
 
 
-**📄 Module:** A module is a **single Python file (.py)** containing functions, classes, variables.
+**📄 Module:** A module is a **single Python file (.py)** containing classes, variables, functions.
 
 
 
@@ -95,6 +401,16 @@
 
 
 &#x09;    print(add(2, 3))                          	  # calls add function → returns 5
+
+======================================================================================================================================================================================
+
+
+
+
+
+
+
+
 
 ========================================================================================================================================================================================
 
@@ -199,264 +515,4 @@ except MyError as e:
 &#x20;   print("Error caught:", e)
 
 ===============================================================================================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-===============================================================================================================================================================
-
-**Class**        : A blueprint/template for creating objects. Defines attributes (data) and methods (behavior).
-
-**Object**       : An instance of a class (real entity created using a class).
-
-
-
-**Attributes**   : Variables inside a class that store data.
-
-&#x20;              ├─ Class Attributes    : Shared variables belonging to the class; accessed using ClassName.attribute.
-
-&#x20;              └─ Instance Attributes : Object-specific variables initialized using self inside constructor.
-
-
-
-**Methods**      : Functions defined inside a class that define behavior of objects.
-
-&#x20;              ├─ Class Methods       : Methods working with class attributes using cls and @classmethod.
-
-&#x20;              └─ Instance Methods    : Methods working with instance attributes using self.
-
-
-
-**Constructor**  : A special method (\_\_init\_\_) automatically called when an object is created; used to initialize instance variables.
-
-
-
-=========================================================================
-
-class Employee:			 # **Class**
-
-
-
-&#x20;   company = "TCS"              # Class Attribute/**Static Variable**
-
-
-
-&#x20;   @classmethod
-
-&#x20;   def get\_company(cls):        # Class Method/**Static Method**
-
-&#x20;       return cls.company
-
-
-
-print(Employee.company)		 # Accessing attribute using class name
-
-print(Employee.get\_company())	 # Accessing method using class name
-
-=========================================================================
-
-
-
-class Employee:			 # **Class**
-
-
-
-&#x20;   def \_\_init\_\_(self, name):    # **Default constructor** (Initializer)
-
-&#x20;       self.name = name         # **Instance Attribute**
-
-
-
-&#x20;   def get\_name(self):          # **Instance Method**
-
-&#x20;       return self.name
-
-
-
-obj = Employee("Rahul")		 # **Creating object**
-
-
-
-print(obj.name)			 # Accessing attribute using object
-
-print(obj.get\_name())		 # Accessing method using object
-
-========================================================================================================================================================
-
-
-
-**Inheritance:** Concept in OOP that allows a class to inherit the attributes, methods from another class.
-
-
-
-&#x09;     **Supported**:      Single Inheritance       Multi-Level Inheritance                    Hierarchical Inheritance
-
-&#x09;	      	    ---------------------     --------------------------                ---------------------------
-
-&#x09;   		     Parent ───▶ Child       Grand\_Parent ───▶ Parent ───▶ Child      Parent ───▶ Child1
-
-&#x20;                            		                                                                └──▶ Child2
-
-
-
-&#x09;     **Not Supported**: Multiple Inheritance     Hybrid Inheritance
-
-&#x09;       		    ---------------------    ------------------
-
-&#x09;		    Parent1 ──┐
-
-&#x09;   		               ├──▶ Child     Grand\_Parent
-
-&#x09;   		    Parent2 ──┘                    │
-
-&#x20;         		    		                    ▼
-
-&#x20;                         				  Parent
-
-&#x20;                            		    		 /      \\
-
-&#x20;                           		  	        ▼       ▼
-
-&#x20;                         		 	     Child1    Child2
-
-
-
-&#x09;     **Concepts in Inheritance:**
-
-&#x09;	✔ Inheritance: Parent Class, Child Class
-
-&#x09;	✔ Constructor Inheritance (via super())
-
-&#x09;	✔ Method Inheritance
-
-
-
-
-
-class Employee:						**# Parent Class**
-
-
-
-&#x20;   def \_\_init\_\_(self, name):				# Parent Constructor
-
-&#x20;       self.name = name
-
-&#x20;       print("Employee Constructor Called")
-
-
-
-&#x20;   def employee\_details(self):				# Parent Method
-
-&#x20;       print(f"{self.name} works in the company")
-
-
-
-
-
-class Developer(Employee):				**# Child Class inheriting Parent Class**
-
-
-
-&#x20;   def \_\_init\_\_(self, name, skill):			# Child Constructor
-
-&#x20;        super().\_\_init\_\_(name)				**# Calling Parent Constructor using super()**
-
-&#x20;       self.skill = skill
-
-&#x20;       print("Developer Constructor Called")
-
-
-
-&#x20;   def coding(self):					**# Child Method**
-
-&#x20;       print(f"{self.name} writes {self.skill} code")
-
-
-
-
-
-dev = Developer("Rahul", "Python")			# Creating Child Object
-
-dev.employee\_details()					# Accessing Parent Method
-
-dev.coding()						# Accessing Child Method
-
-========================================================================================================================================================
-
-
-
-**Polymorphism:**	Polymorphism means "many forms". It allows the same method/operator/function name to perform different behaviors depending on the object or data type.
-
-
-
-&#x09;**EX:** Same method name -> Different behavior
-
-
-
-&#x09;class Dog:
-
-&#x09;    def sound(self): print("Dog barks")     # Dog behavior
-
-
-
-&#x09;class Cat:
-
-&#x09;    def sound(self): print("Cat meows")     # Cat behavior
-
-
-
-&#x09;for obj in \[Dog(), Cat()]:		    # Different objects responding differently to same method
-
-&#x20;   	obj.sound()
-
-
-
-**Method overriding (Run-time Polymorphism)**:
-
-&#x09;- It occurs when a child class provides its own implementation of a method i.e. already defined in the parent class using the same method name and parameters.
-
-
-
-&#x09;class Animal:
-
-&#x20;   		def sound(self): print("Animal sound")
-
-
-
-&#x09;class Dog(Animal):
-
-&#x20;   		def sound(self): print("Dog barks")   # Method Overriding
-
-
-
-&#x09;Dog().sound()
-
-
-
-
-
-**Method overloading:**
-
-&#x09;**-** Using the same method name for different number/types of inputs.
-
-&#x09;**-** Python does not support true method overloading directly. The latest method definition overrides the previous one.
-
-
-
-&#x09;Alternative: Use default arguments (\*args / default parameters) to achieve similar behavior.
-
-========================================================================================================================================================
 

@@ -1,8 +1,6 @@
 ==========================================================================================================================
 
-1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators)
-			         **Control Flow** (if-else, loops, break, continue, pass)
-				 
+1\. Procedural Programming      – **Basics** (data types, variables, I/O, operators); **Control Flow** (if-else, loops, break, continue, pass)
 
 2\. **Function**al Programming      – Functions, lambda, decorators, generators
 
@@ -96,13 +94,13 @@
 
 &#x20;       ⮚ Multiple Values to Multiple variables : a, b, c = 1, "hero", "Ram charan"
 
-&#x20;       ⮚ Single value to Multiple variables    : a = b = c = 1	
+&#x20;       ⮚ Single value to Multiple variables    : a = b = c = 1
 
 
 
 &#x20;   Dynamic:
 
-&#x20;       name   = input("Enter your name: ")              # String input (default); type(name)=<class 'str'>
+&#x20;       name   = input("Enter your name: ")              # String input (default); type(name)=<class 'str'>		Typecasting, Datatype widening
 
 &#x20;       age    = int(input("Enter your age: "))          # Integer input; type(age)=<class 'int'>
 
@@ -112,9 +110,7 @@
 
 **Output:**
 
-&#x20;      print(f"Name: {name}\\nAge: {age}\\nHeight: {height}") # Display Output
-
-
+&#x20;      print(f"Name: {name}\\nAge: {age}\\nHeight: {height:.2f}") 	# Display output; float → 2 decimal places
 
 **========================================================================================================================================================================================**
 
@@ -236,7 +232,7 @@
 
 &#x20;   		print(i, numbers\[i])
 
-&#x20;   	i += 1
+&#x20;   	        i += 1
 
 
 
@@ -536,7 +532,7 @@
 
 &#x09;**Sorting**	sorted(lst)              : Returns new sorted list
 
-&#x09;**Reverse**	rev\_list = list(s)\[::-1]  # convert set to list (since set is unordered) and reverse the list using slicing
+&#x09;**Reverse**				 : Set doesn't support reverse() because sets are unordered collections.
 
 &#x09;=================================================================================================
 
@@ -600,21 +596,23 @@
 
 &#x09;
 
-&#x09;	**Indexing:**
+&#x09;	**Indexing/slicing:**
 
-&#x09;		tup\[index]		    → Access random element based on index
+&#x09;		tup=(1,2,3,4,5)
 
-&#x09;		a, b, c, d, e = tup         → Unpacking
 
-&#x09;
 
-&#x09;	**Slicing:**
+&#x09;		tup\[index]		    → Access random element based on index	
 
 &#x09;		tup\[start:stop:step]        → Slicing (stop is exclusive): Default: start = 0, stop=end of sequence, step=1
 
 &#x20;       		tup\[0:n:1]                  → Traverse left → right: +ve indexing
 
 &#x09;	        tup\[-1:-n:-1]               → Traverse right → left: -ve indexing
+
+
+
+&#x09;		a, b, c, d, e = tup         → Unpacking
 
 
 
@@ -633,16 +631,6 @@
 &#x09;		  in operator                    → Check existence
 
 &#x20; 			  \[x for x in tup if x==2]       → Get all index's of 2
-
-&#x09;=================================================================================================
-
-&#x09;**Packing \& Unpacking:**
-
-&#x09;	t = 1,2,3	# Packing
-
-&#x09;	a,b,c = t	# UnPacking
-
-&#x09;
 
 ===========================================================================================================================================================
 
@@ -772,7 +760,11 @@
 
 │
 
-├─ Extraction
+├─ Extraction : slicing
+
+│
+
+├─ Manipulations
 
 │     ├─ strip()       : Remove spaces (both sides)     -> "  hello  ".strip()   # "hello"
 
@@ -780,11 +772,7 @@
 
 │     ├─ rstrip()     : remove right spaces
 
-│     └─ split()       : Split string                   -> "hello world".split()  # \['hello','world']
-
-│
-
-├─ Manipulations
+│     ├─ split()       : Split string                   -> "hello world".split()  # \['hello','world']
 
 │     ├─ replace()     : Replace substring              -> "hello world".replace("world","Python")
 
@@ -797,8 +785,6 @@
 ├─ String Checks
 
 │     ├─ isalpha()     : Only letters                   -> "abc".isalpha()       # True
-
-│     ├─ isdigit()     : Only digits                    -> "123".isdigit()       # True
 
 │     ├─ isnumeric()   : Numeric (incl unicode)         -> "123".isnumeric()     # True
 
@@ -841,8 +827,6 @@
 │     ├─ math.sqrt(n)   : Square root                   -> math.sqrt(25)     # 5.0
 
 │     ├─ math.pow(n,p)  : Power (float)                 -> math.pow(2,3)     # 8.0
-
-│     ├─ pow(n,p,mod)   : Modular power (IMPORTANT)     -> pow(2,3,5)        # 3
 
 │     ├─ math.exp(n)    : e^n                           -> math.exp(1)
 
