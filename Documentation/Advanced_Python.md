@@ -164,7 +164,7 @@
 
 &#x09;	✔ Inheritance: Parent Class, Child Class
 
-&#x09;	✔ Constructor Inheritance (via super())
+&#x09;	✔ use super() to access the parent class's methods and attributes.
 
 &#x09;	✔ Method Inheritance
 
@@ -172,55 +172,51 @@
 
 
 
-&#x09;class Employee:						**# Parent Class**
+&#x09;class Company:
+
+&#x09;    company\_name = "TCS"
 
 
 
-&#x09;    def \_\_init\_\_(self, name):				# Parent Constructor
+&#x09;    def \_\_init\_\_(self, location):
+
+&#x09;        self.location = location
+
+
+
+&#x09;    def work(self):
+
+&#x09;        print("Working for TCS")
+
+
+
+
+
+&#x09;class Employee(Company):
+
+&#x09;    def \_\_init\_\_(self, name, location):
+
+&#x09;        super().\_\_init\_\_(location)      	# Parent constructor
 
 &#x09;        self.name = name
 
-&#x09;        print("Employee Constructor Called")
 
 
+&#x09;    def show\_details(self):
 
-&#x09;    def employee\_details(self):				# Parent Method
+&#x09;        print(super().company\_name)    	       # Parent attribute
 
-&#x09;        print(f"{self.name} works in the company")
+&#x09;        super().work()                         # Parent method
 
-
-
-
-
-&#x09;class Developer(Employee):				**# Child Class inheriting Parent Class**
-
-&#x09;
-
-&#x09;    def \_\_init\_\_(self, name, skill):			# Child Constructor
-
-&#x09;         super().\_\_init\_\_(name)				**# Calling Parent Constructor using super()**
-
-&#x09;        self.skill = skill
-
-&#x09;        print("Developer Constructor Called")
-
-
-
-&#x09;    def coding(self):					**# Child Method**
-
-&#x09;        print(f"{self.name} writes {self.skill} code")
+&#x20;       	print(self.name, self.location)
 
 
 
 
 
-&#x09;dev = Developer("Rahul", "Python")			# Creating Child Object
+emp = Employee("Rahul", "Bengaluru")
 
-&#x09;dev.employee\_details()					# Accessing Parent Method
-
-&#x09;dev.coding()						# Accessing Child Method
-
-
+emp.show\_details()
 
 \# ========================================================================================================================================================================
 
@@ -328,9 +324,23 @@
 
 &#x09;obj.work()
 
+
+
+\# ========================================================================================================================================================================
+
+**Encapsulation**: Wrapping data and methods together inside a class and controlling access to the data through methods.
+
+\# ========================================================================================================================================================================
+
+
+
+&#x09;Public     → name      → Can be accessed anywhere
+
+&#x09;Protected  → \_name     → Can be accessed in class and child class
+
+&#x09;Private    → \_\_name    → Can be accessed only inside the class
+
 ======================================================================================================================================================================================
-
-
 
 
 
@@ -414,7 +424,9 @@
 
 ========================================================================================================================================================================================
 
-**Exceptions :** Exceptions are runtime events that disrupt the normal flow of a program.
+Error     → Problem in code, occurs mostly due to syntax issues → Usually not handled
+
+Exception → Runtime problem, Occurs during execution	        → Can be handled using try-except
 
 
 
@@ -498,7 +510,13 @@ finally:
 
 class MyError(Exception):
 
-&#x20;   pass
+&#x20;   def \_\_init\_\_(self, message):
+
+&#x20;       super().\_\_init\_\_(message)
+
+
+
+
 
 
 
