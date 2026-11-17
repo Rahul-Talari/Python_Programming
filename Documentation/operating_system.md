@@ -26,3 +26,12 @@
 - Evolution of Storage Devices
 - Secondary-Storage Structure
 - Recovery Techniques
+
+
+3.1
+**Swapping:** A memory management technique in which the OS temporarily moves a process between RAM and disk to free up physical memory.
+
+- **Swap Out:** Moving a process from RAM to disk.
+- **Swap In:** Bringing a process from disk back into RAM.
+3.2
+Memory Allocation Techniques:   Contiguos memory allocation, non-contiguous allocation
